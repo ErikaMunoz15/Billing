@@ -1,0 +1,55 @@
+<html>   
+   <head>
+      <title>Form Validation</title>      
+      <script src = "index.js"></script>      
+   </head>
+   
+   <body>
+    <form>
+	<fieldset>
+      <form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">      
+            
+                Create a new event.
+                <br><br>
+                <label for ="eventType">Event Type: </label>
+                
+                   <select name = "Event Type">
+                      <option value = "-1" selected>[choose your type of event]</option>
+                      <option value = "1">Minor Event</option>
+                      <option value = "2">Major Event</option>
+                   </select><br/><br/>
+               
+               <label for = "eventTitle">Event Title: </label>
+               <input type = "text" required name = "Event Title" /><br/><br/>
+
+                <label for = "eventDates">Event Dates: </label>
+                <input type="date" required id="myDate" value="2020-02-14"> to
+                <input type="date" id="myDate" value="2020-02-14"><br/><br/>
+
+                <label for = "postingDate">Posting Date: </label>
+                <input type="date" required id="myDate" value="2020-02-14"><br/><br/><br/>
+
+                <input type="checkbox" id="cb1" name="cb1" value="Choice1">
+                <label for="cb1"> Is registration required?</label><br/><br/>
+
+                <input type="checkbox" id="cb2" name="cb2" value="Choice2">
+                <label for="cb2"> Is event associated with any Family Programs?</label><br/><br/>
+
+                <input type="checkbox" id="cb3" name="cb3" value="Choice3">
+                <label for="cb3"> Upon Registration Completion, Are users to Receive an Auto Generated Email?</label><br/><br/>
+
+                <input type="checkbox" id="cb2" name="cb2" value="Choice2">
+                <label for="cb2"> Is there a point of contact?</label><br/><br/>
+
+                <input type="checkbox" id="cb2" name="cb2" value="Choice2">
+                <label for="cb2"> Is there a hosting command point of contact?</label><br/><br/>
+
+
+                <br/>
+                <button onclick="save()">Save</button>
+                <button onclick="cancel()">Cancel</button>
+  
+      </form>    
+	</fieldset>  
+   </body>
+</html>
